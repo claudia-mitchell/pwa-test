@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#1391AE">
+    <link rel="icon" href="/icons/icon-192.png" type="image/png">
+
+
+    <title>experiment 3 - web app</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- MediaPipe FaceMesh and Drawing Utils -->
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh/face_mesh.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script>
+</head>
+
+<body>
+    <div id="cameraContainer">
+        <div id="cameraWrapper">
+            <video id="video" autoplay playsinline></video>
+            <canvas id="output"></canvas>
+        </div>
+        <div id="blinkDisplay">Blinks: 0</div>
+        <div id="timerDisplay">Time: 60s</div>
+    </div>
+
+    <div id="buttonContainer">
+        <button id="toggleBtn">Turn Camera On</button>
+        <button id="resetBtn">Reset Counter</button>
+    </div>
+
+    <div id="dataLogContainer">
+        <h3>Blink Data</h3>
+        <ul id="dataLogList"></ul>
+    </div>
+
+    <div id="bubbleMapContainer">
+        <canvas id="bubbleMap"></canvas>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
